@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.asm": "asm-intel-x86-generic",
+        "stdio.h": "c",
+        "math.h": "c"
+    }
+}

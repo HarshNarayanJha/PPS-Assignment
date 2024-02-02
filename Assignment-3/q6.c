@@ -14,7 +14,7 @@ int main() {
 
     for (int i = 1; i < d + 1; ++i) {
         int digit;
-        digit = (int) ((N % (int) pow(10, i)) - (n % (int) pow(10, i-1))) / (int) pow(10, i-1);
+        digit = (int) ((n % (int) pow(10, i)) - (n % (int) pow(10, i-1))) / (int) pow(10, i-1);
 
         sum += pow(digit, d);
     }

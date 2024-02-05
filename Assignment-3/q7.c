@@ -10,7 +10,7 @@ int main() {
     int div_b[256];
 
     int ca = 0;
-    for (int n = 1; n < a; ++n) {
+    for (int n = 1; n <= a; ++n) {
         if (a % n == 0) {
             div_a[ca] = n;
             ++ca;
@@ -24,7 +24,7 @@ int main() {
     printf("\n");
 
     int cb = 0;
-    for (int n = 1; n < b; ++n) {
+    for (int n = 1; n <= b; ++n) {
         if (b % n == 0) {
             div_b[cb] = n;
             ++cb;

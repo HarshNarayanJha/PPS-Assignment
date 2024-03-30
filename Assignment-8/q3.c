@@ -3,11 +3,17 @@
 int main() {
     int fibbo(int n);
 
-    int n = 6;
-    printf("%dth Fibbonacci: %d\n", n, fibbo(n));
-    return 0;
+    int n;
+    printf("How many terms: ");
+    scanf("%d", &n);
 
-    int upto;
+    for (int i = 0; i < n + 1; ++i) {
+        printf("%d ", fibbo(i));
+    }
+
+    printf("\n");
+
+    return 0;
 }
 
 int fibbo(int n) {

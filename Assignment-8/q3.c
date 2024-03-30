@@ -1,20 +1,26 @@
 #include <stdio.h>
 
 int main() {
-    int fibbo(int n);
+    int fibo(int n);
 
-    int n = 6;
-    printf("%dth Fibbonacci: %d\n", n, fibbo(n));
+    int n;
+    printf("How many terms: ");
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; ++i) {
+        printf("%d ", fibo(i));
+    }
+
+    printf("\n");
+
     return 0;
-
-    int upto;
 }
 
-int fibbo(int n) {
+int fibo(int n) {
 
     if (n <= 1) {
         return n;
     }
 
-    return fibbo(n-1) + fibbo(n-2);
+    return fibo(n-1) + fibo(n-2);
 }

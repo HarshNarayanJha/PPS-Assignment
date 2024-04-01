@@ -1,15 +1,17 @@
 # Quick Sort
 
+Quick Sort is a type of sorting algorithm that uses Divide and Conquer Startegy. It sorts the array by recursively dividing it into
+two subarrays until the whole array is sorted
 
 ## Algorithm
 
-Step 1: Set l <- 0 and r <- length of array - 1
+Step 1: set l <- 0 and r <- length of array - 1
 
 Step 2: if l >= r, break the recursion
 
-Step 3: set pivot <- last element of the **array**
+Step 3: set pivot <- last element of the array
 
-Step 4: Set two pointers, i before the start and j at the start of the array
+Step 4: set two indexes, i before the start and j at the start of the array
 
 Step 5: while j < pivot repeat steps 6 to 7
 
@@ -17,22 +19,24 @@ Step 6: if current j < pivot, increment i and swap i and j
 
 Step 7: increment j
 
-Step 8: once j reaches last, swap pivot with i + 1
+Step 8: once j reaches end, swap pivot with i + 1
 
 Step 9: repeat steps 2 to 8 with two parts of array, 
 
 		(i) l = 0 and r = pivot -1
 
-		(ii) l = pivot+1 r = length - 1;
+		(ii) l = pivot + 1 and r = length - 1;
 	
-Step 10: Array is sorted
+Step 10: array is sorted
+
+Step 11: END ALGO
 
 
 ## Pseudo-code
 ```c
 // quicksort pseudo-code
 
-define integer partition(array arr, integer l, integer r) {
+integer partition(array arr, integer l, integer r) {
 	take pivot = last element of arr;
 	set i = index before arr first index;
 	set j = arr first index;
@@ -51,7 +55,7 @@ define integer partition(array arr, integer l, integer r) {
 	return index i;
 }
 
-define quicksort(array arr, integer l, integer r) {
+quicksort(array arr, integer l, integer r) {
 	if l >= r return;
 	
 	pivot = partition(arr, l, r);

@@ -8,14 +8,19 @@ int main() {
     fgets(str, 128, stdin);
     c = getc(stdin);
 
+    int count = 0;
+
     for (int i = 0; str[i] != '\0'; ++i) {
         if (str[i] == c) {
-            printf("Found The Character!");
-            return 0;
+            count++;
         }
     }
 
-    printf("Didn't find the character!");
+    if (count > 0) {
+        printf("%d occurences", count);
+    } else {
+        printf("Didn't find the character!");
+    }
 
     return 0;
 }
